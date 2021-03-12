@@ -16,11 +16,11 @@ int		ft_atoi(const char *str)
 			sign = sign * -1;
 		cha++;
 	}
-	while (*cha >= '0' && *cha <= 9)
+	while (*cha >= '0' && *cha <= '9')
 	{
 		nbr = nbr * 10;
 		nbr = (int)(*cha - '0');
 		cha++;
 	}
-	return (nbr * sign);
+	return ((int)nbr * sign);
 }
