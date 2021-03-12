@@ -1,24 +1,29 @@
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 char	ft_aff_a(char *str)
 {
-	int a;
+	int x;
 
-	a = 0;
-	while (str[a] != '\0')
+	x = 0;
+	while (str[x] != '\0')
 	{
-		if (str[a] == 'a')
+		if (str[x] == 'a')
 		{
-			write(1, "a", 1);
+			ft_putchar('a');
 		}
-		a++;
+		x++;
 	}
-	write(1, "\n", 1);
+	ft_putchar('\n');
 	return (*str);
 }
 
-int		main(int argc, char *argv[])
+int		main(int argc, char **argv)
 {
 	if (argc == 2)
 	{
@@ -26,8 +31,8 @@ int		main(int argc, char *argv[])
 	}
 	else
 	{
-		write(1, "a", 1);
-		write(1, "\n", 1);
+		ft_putchar('a');
+		ft_putchar('\n');
 	}
 	return (0);
 }
